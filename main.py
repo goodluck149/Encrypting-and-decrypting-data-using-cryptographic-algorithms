@@ -6,9 +6,11 @@ def main():
         print("1. AES")
         print("2. RSA")
         print("3. Вийти з програми")
-
-        choice = input("Ваш вибір (1, 2, 3): ")
-
+        try
+            choice = input("Ваш вибір (1, 2, 3): ")
+        except KeyboardInterrupt:
+            print("\nПрограма була перервана користувачем.")
+            break
         if choice == '1':
             call(["python", "aes.py"])
         elif choice == '2':
