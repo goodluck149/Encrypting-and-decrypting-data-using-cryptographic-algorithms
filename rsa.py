@@ -192,10 +192,10 @@ def function_rsa():
                 # Перевірка підпису
                 if verify_signature(public_key, decrypted, signature):
                     print("Підпис валідний.")
+                    print(f"Розшифровані дані у файл {save_decrypted_path}")
                 else:
                     print("Підпис недійсний!")
 
-                print(f"Розшифровані дані у файл {save_decrypted_path}")
                 clear_sensitive_data(private_key, public_key, encrypted_data, signature, decrypted)
 
             elif choice == "3":
