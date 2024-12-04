@@ -203,6 +203,9 @@ def function_rsa():
                 break
             else:
                 print("Невірний вибір. Спробуйте ще раз.")
+        except KeyboardInterrupt:
+            print("\nПрограма була перервана користувачем.")
+            break
         except Exception as e:
             print(f"Сталася помилка: {e}")
 
